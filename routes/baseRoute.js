@@ -9,7 +9,7 @@ baseRouter.get("/",(req,res) => {
         "message" : "Welcome To Home Page"
     });
 });
-baseRouter.get("/currency_exhange",currenyExchange);
-baseRouter.get("/companies/public_treasury",getCompaniesList);
+baseRouter.post("/currency_exhange",currenyExchange);
+baseRouter.get("/companies/public_treasury/:currency",getCompaniesList);
 
 module.exports = baseRouter;

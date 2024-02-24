@@ -11,7 +11,6 @@ module.exports.currenyExchange = async (req, res) => {
         const curr_price_from_in_btc = res_of_from.data.market_data.current_price.btc;
         const curr_price_to_in_in_btc = res_of_to.data.market_data.current_price.btc;
         const exchanged_price = (curr_price_from_in_btc * 1.0) / curr_price_to_in_in_btc;
-
         // sending response
         res.status(200).json({
             exchanged_price: exchanged_price

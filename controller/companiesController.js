@@ -2,7 +2,7 @@ const coinApi = require("../config/axiosconfig")
 
 module.exports.getCompaniesList = async(req,res) => {
     try {
-        const {currency} = req.body;
+        const currency = req.params.currency;
         const response = await coinApi.get(`/companies/public_treasury/${currency}`);
 
         const companies = response.data.companies;
